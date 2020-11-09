@@ -34,7 +34,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
 
-        <a class="navbar-brand" href="#">MySeriesList</a>
+        <?php echo anchor('series', 'MySeriesList', 'class="navbar-brand"') ?>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,10 +42,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Adicionar</a>
+                    <?php echo anchor('series/novaSerie', 'Adicionar', 'class="nav-link"')?>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sair</a>
+                <?php echo anchor('series/sair', 'Sair', 'class="nav-link"')?>
                 </li>
             </ul>
         </div>

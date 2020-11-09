@@ -8,6 +8,7 @@
                 <th>Sinopse</th>
                 <th>Nota</th>
                 <th>Episodios</th>
+                <th>Ações</th>
             </tr>
         </thead>
 
@@ -19,6 +20,12 @@
                     <td><?= $serie['sinopse'] ?></td>
                     <td><?= $serie['nota'] ?></td>
                     <td><?= $serie['episodios'] ?></td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-success mr-1">Editar</button>
+                            <button class="btn btn-danger">Excluir</button>
+                        </div>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
