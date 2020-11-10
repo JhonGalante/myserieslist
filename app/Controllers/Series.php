@@ -8,6 +8,7 @@ class Series extends Controller {
     protected $serieModel;
 
     public function __construct(){
+        helper('form');
         $this->serieModel = new SerieModel();
     }
 
@@ -23,7 +24,6 @@ class Series extends Controller {
     }
 
     public function novaSerie(){
-        helper('form');
         return view('nova_serie/home');
     }
 
@@ -42,6 +42,14 @@ class Series extends Controller {
         }else{
             return view('error_nova_serie');
         }
+    }
+
+    public function edit($id = null){
+
+        $dado = $this->serieModel->find($id);
+        
+        return view('nova_serie/home', ['serie' => $dado]);
+        
     }
 
 

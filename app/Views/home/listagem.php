@@ -22,8 +22,8 @@
                     <td><?= $serie['episodios'] ?></td>
                     <td>
                         <div class="btn-group">
-                            <button class="btn btn-success mr-1">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
+                            <button class="btn btn-success mr-1"><?php echo anchor('series/edit/'.$serie['id'], 'Editar')?></button>
+                            <button class="btn btn-danger"><?php echo anchor('series/delete/'.$serie['id'], 'Excluir')?></button>
                         </div>
                     </td>
                 </tr>
