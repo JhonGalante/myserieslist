@@ -38,9 +38,9 @@ class Series extends Controller {
         $request = $this->serieModel->save($dados);
 
         if($request){
-            return view('sucesso');
+            return view('nova_serie/sucesso_salvar_serie');
         }else{
-            return view('error_nova_serie');
+            return view('nova_serie/error_salvar_serie');
         }
     }
 
@@ -50,6 +50,16 @@ class Series extends Controller {
         
         return view('nova_serie/home', ['serie' => $dado]);
         
+    }
+
+    public function delete($id = null){
+        
+        if($this->serieModel->delete($id)){
+            return view('home/home_page', ['series' => $this->serieModel->findAll()]);
+        }else{
+            return view('error_deletar_serie');
+        }
+
     }
 
 

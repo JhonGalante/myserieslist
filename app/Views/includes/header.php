@@ -44,9 +44,6 @@
                 <li class="nav-item">
                     <?php echo anchor('series/novaSerie', 'Adicionar', 'class="nav-link"')?>
                 </li>
-                <li class="nav-item">
-                <?php echo anchor('series/sair', 'Sair', 'class="nav-link"')?>
-                </li>
             </ul>
         </div>
 
