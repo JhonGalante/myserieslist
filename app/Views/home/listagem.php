@@ -19,7 +19,7 @@
 
 <div class="container mt-4">
     <h3>Séries</h3>
-    <table class="table table-hover table-light text-dark table-striped">
+    <table id="seriesTabela" class="table table-hover table-light text-dark table-striped">
         <thead>
             <tr>
                 <th>#</th>
